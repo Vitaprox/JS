@@ -2,97 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ДЗ</title>
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <script>
-        let cost
-        let calories
-    class Burger {
-        constructor () {
-            this._size ()
-        }
-        _size () {
-            cost = 0
-            calories = 0
-            let a = prompt('Выберите бургер \nБольшой (Б) или маленький (М) Ответ буквой')
-            if(a = 'Б'){
-                cost += 100
-                calories += 40
-                this._filling ()
-                
-            } else if (a = 'М'){
-                cost += 50
-                calories += 20
-                this._filling ()
-            } else {
-                alert('ВВЕДИТЕ НУЖНУЮ БУКВУ')
-                this._size ()
-            }
-            
-        }
-        _filling () {
-            let b = +prompt(`Выберите ОДНУ начинку: \n 1) С сыром \n 2) С салатом \n 3) С картофелем \n Напишите цифрой`)
-            if(b == 1){
-                cost += 10
-                calories += 20
-                this._extra1 ()
-                
-            } else if (b == 2){
-                cost += 20
-                calories += 5
-                this._extra1 ()
-                
-            } else if (b == 3){
-                cost += 15
-                calories += 10
-                
-                this._extra1 ()
-            } else {
-                alert('Введите правильный номер')
-                this._filling ()
-            }
-            
-        }
-        _extra1 () {
-            let c = prompt('Хотите дополнительно посыпать приправой (15 рублей, 0 калорий)? \nВ ответе укажите да или нет')
-            if(c == 'да' || c == 'Да'){
-                cost += 15
-                this._extra2 ()
-            } else if(c == 'нет' || c == 'Нет'){
-                this._extra2 ()
-            } else {
-                alert('Введите да или нет')
-                this._extra1 ()
-            }
-        }
-        _extra2 () {
-            let d = prompt('Хотите полить майонезом (20 рублей, 5 калорий)? \nВ ответе укажите да или нет')
-            if(d == 'да' || d == 'Да'){
-                cost += 20
-                calories += 5
-                this._end ()
-            } else if(d == 'нет' || d == 'Нет'){
-                this._end ()
-            } else {
-                alert('Введите да или нет')
-                this._extra2 ()
-            }
-        }
-        _end () {
-            let e = prompt(`Ваш бургер стоит ${cost} рублей и в нем ${calories} калорий \nХотите собрать новый?`)
-            if(e == 'да' || e == 'Да'){
-                this._size ()
-            } else if(e == 'нет' || e == 'Нет'){
-                alert('Спасибо за заказ')
-            } else {
-                alert('Выберите да или нет')
-                this._end ()
-            }
-        }
-    }
-    let z = new Burger ()
-    
-    </script>
+    <header>
+        <div class="logo">E-shop</div>
+        <div class="cart">
+            <form action="#" class="search-form">
+                <input type="text" class="search-field">
+                <button class="btn-search" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <button class="btn-cart" type="button">Корзина</button>
+            <div class="cart-block invisible"></div>
+        </div>
+    </header>
+    <main>
+        <div class="goods-list"></div>
+    </main>
+
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
