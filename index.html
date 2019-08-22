@@ -2,31 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Интернет-магазин</title>
-    <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
 </head>
 <body>
-    <header>
-        <div class="logo">E-shop</div>
-        <div class="cart">
-            <form action="#" class="search-form">
-                <input type="text" class="search-field">
-                <button class="btn-search" type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
-            <button class="btn-cart" type="button">Корзина</button>
-            <div class="cart-block invisible"></div>
-        </div>
-    </header>
-    <main>
-        <div class="goods-list"></div>
-    </main>
-
-
-
-    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+    <script>
+    let str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 'Sed ac consectetur ante. Pellentesque at justo libero'. Suspendisse magna dolor, mattis eu elit sed, porta aliquet magna. Donec facilisis sem nisi, id molestie nunc lobortis ac. Phasellus malesuada lorem vitae lacus facilisis laoreet. In pellentesque sapien mauris, vitae ullamcorper risus 'pulvinar in'. Phasellus molestie nulla nec felis dictum, in ornare ligula ultrices. Integer tincidunt, sapien 'consectetur mollis lobortis', tellus nibh vulputate est, nec tincidunt nisl turpis pellentesque 'tellus'. Cras mi quam, bibendum at massa 'vitae', tristique faucibus purus. Duis vulputate semper 'ultrices'. Ut accumsan nibh ac tincidunt semper. 'In vitae ullamcorper enim'. aren't"
+    
+    console.log(str.replace(/'/ig, '\"'))
+    console.log(str.replace(/^'|(\s)'|'(\s)|'$/g, '$1"$2'))
+    </script>
 </body>
 </html>
